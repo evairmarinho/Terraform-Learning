@@ -3,12 +3,6 @@ variable "region" {
   description = "Region where the resources will be created."
 }
 
-
-variable "role_arn" {
-  type        = string
-  description = "EC2 assume this role ARN"
-}
-
 variable "groups" {
   type        = list(string)
   default     = []
