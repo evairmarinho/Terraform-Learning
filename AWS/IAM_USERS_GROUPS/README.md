@@ -27,3 +27,11 @@
     ]
 }
 ```
+## Getting started
+```sh
+terraform init
+
+terraform plan
+
+terraform apply
+```
