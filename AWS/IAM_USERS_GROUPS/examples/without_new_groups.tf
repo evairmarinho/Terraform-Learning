@@ -1,5 +1,5 @@
   
-module "with_new_groups" {
+module "without_new_groups" {
 
   source = "../../.."
   region = "us-east-1"
