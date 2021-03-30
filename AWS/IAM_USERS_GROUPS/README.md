@@ -27,6 +27,46 @@
     ]
 }
 ```
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_iam_group.groups](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
+| [aws_iam_user.users](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
+| [aws_iam_user_group_membership.user_to_groups](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_group_membership) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | AWS Access Key | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | Region where the resources will be created. | `string` | n/a | yes |
+| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | AWS Secret Access Key | `string` | n/a | yes |
+| <a name="input_create_groups"></a> [create\_groups](#input\_create\_groups) | Define if Terraform will create new\_groups based on variable groups. | `bool` | `true` | no |
+| <a name="input_groups"></a> [groups](#input\_groups) | List of group names for Terraform create, case create\_groups variable be true | `list(string)` | `[]` | no |
+| <a name="input_users"></a> [users](#input\_users) | Map for Terraform create users. | `map(any)` | <pre>{<br>  "user1": {<br>    "groups": [<br>      "ADM",<br>      "developers"<br>    ],<br>    "name": "test",<br>    "path": "/"<br>  }<br>}</pre> | no |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
+
 ## Getting started
 ```sh
 terraform init
