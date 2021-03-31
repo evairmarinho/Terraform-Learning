@@ -39,10 +39,6 @@ No requirements.
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
-## Modules
-
-No modules.
-
 ## Resources
 
 | Name | Type |
@@ -61,10 +57,6 @@ No modules.
 | <a name="input_create_groups"></a> [create\_groups](#input\_create\_groups) | Define if Terraform will create new\_groups based on variable groups. | `bool` | `true` | no |
 | <a name="input_groups"></a> [groups](#input\_groups) | List of group names for Terraform create, case create\_groups variable be true | `list(string)` | `[]` | no |
 | <a name="input_users"></a> [users](#input\_users) | Map for Terraform create users. | `map(any)` | <pre>{<br>  "user1": {<br>    "groups": [<br>      "ADM",<br>      "developers"<br>    ],<br>    "name": "test",<br>    "path": "/"<br>  }<br>}</pre> | no |
-
-## Outputs
-
-No outputs.
 <!-- END_TF_DOCS -->
 
 ## Getting started
